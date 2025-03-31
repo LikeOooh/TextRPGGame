@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:ital,wght@0,1..1000;1,1..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" async></script>
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="game-field">
+    <div class="title-block">
+      <div class="title">
+        <h1>Текстовая RPG игра</h1>
+      </div>
+      <div class="game-start">
+        <div class="button start active" id="start">Начать игру</div>
+        <div class="button restart inactive" id="restart">Перезапуск</div>
+      </div>
+    </div>
+    <div class="status-block">
+
+      <div class="info">
+        <div class="column">
+          <div class="row">
+            <span>Имя: </span>
+          </div>
+          <div class="row">
+            <span>Здоровье:</span>
+          </div>
+          <div class="row">
+            <span>Сила: </span>
+          </div>
+          <div class="row">
+            <span>Защита: </span>
+          </div>
+          <div class="row">
+            <span>Уровень: </span>
+          </div>
+          <div class="row">
+            <span>Инвентарь: </span>
+          </div>
+          <div class="row">
+            <span>Опыт: </span>
+          </div>
+        </div>
+        <div class="column2 value">
+          <div class="row">
+            <span class="pink" id="name"></span>
+          </div>
+          <div class="row">
+            <span class="pink" id="health"></span>
+          </div>
+          <div class="row">
+            <span class="pink" id="power"></span>
+          </div>
+          <div class="row">
+            <span class="pink" id="defense"></span>
+          </div>
+          <div class="row">
+            <span class="pink" id="level"></span>
+          </div>
+          <div class="row">
+            <span class="pink" id="equipment"></span>
+          </div>
+          <div class="row" id="experience">
+            <img class="icon inactive"
+              src="https://cdn4.iconfinder.com/data/icons/forrest/512/Forrest_forestry_tree_pine_trees_leaves_nature-1024.png"
+              alt="Лес" id="forest-icon">
+            <img class="icon inactive" src="https://cdn-icons-png.freepik.com/512/2014/2014191.png" alt="Подземелье"
+              id="dungeon-icon">
+            <img class="icon inactive" src="https://img.freepik.com/free-icon/house_318-610530.jpg?size=338&ext=png"
+              alt="Деревня" id="village-icon">
+          </div>
+        </div>
+        <div class="column3 value enemy">
+          <div class="row">
+            <span class="blue" id="enemy-name"></span>
+          </div>
+          <div class="row">
+            <span class="blue" id="enemy-health"></span>
+          </div>
+          <div class="row">
+            <span class="blue" id="enemy-power"></span>
+          </div>
+          <div class="row">
+            <span class="blue" id="enemy-defense"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-block">
+        <div class="button attack inactive" id="attack">Атаковать</div>
+        <div class="button defend inactive" id="defend">Защищаться</div>
+        <div class="equipment-block inactive" id="equipment-block">
+          <div class="button equip-but inactive" id="use-potion">
+            <img
+              src="https://cdn1.iconfinder.com/data/icons/outlined-medieval-icons-pack/200/magic_triangle_flask-1024.png"
+              alt="Зелье здоровья">
+          </div>
+          <div class="button equip-but inactive" id="use-shield">
+            <img src="https://www.clipartmax.com/png/full/19-194376_shield.png" alt="Щит">
+          </div>
+          <div class="button equip-but inactive" id="use-power">
+            <img src="https://sport2baksanr.edu07.ru/files/images/site_logo.png" alt=" + Сила">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="location-block">
+      <div class="this-location">
+        <span>Текущая локация: </span>
+        <span id="location"></span>
+      </div>
+      <div class="all-locations">
+        <div class="button location-but inactive" id="forest">Идти в Лес</div>
+        <div class="button location-but inactive" id="dungeon">Идти в Подземелье</div>
+        <div class="button location-but inactive" id="village">Идти в Деревню</div>
+      </div>
+    </div>
+    <div class="log-block" id="log-block">
+    </div>
+
+  </div>
+
+</body>
+
+</html>

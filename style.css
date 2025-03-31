@@ -1,0 +1,239 @@
+* {
+    font-family: 'Sofia Sans Extra Condensed';
+    font-weight: 400;
+    font-size: 24px;
+}
+
+:root {
+    --clr-hero: rgb(243, 44, 177);
+    --clr-white: rgb(204, 215, 224);
+    --clr-red: rgb(243, 44, 44);
+    --clr-green: rgb(0, 212, 70, 1);
+    --clr-blue: rgb(39, 98, 207);
+    --clr-grey: rgb(60, 61, 63);
+    --clr-black: rgb(12, 12, 12);
+    --clr-light-grey: rgb(149, 151, 156);
+}
+
+body {
+    height: 100vh;
+    background-color: var(--clr-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-field {
+    width: 1000px;
+    height: 800px;
+    background-color: #232323;
+    border-radius: 16px;
+    padding: 30px;
+    border: 3px solid var(--clr-green);
+    box-shadow: 0px 0px 50px var(--clr-green);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+}
+
+.title-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-block .title {
+    min-width: 620px;
+    text-align: center;
+}
+
+h1 {
+    line-height: 16px;
+    color: rgb(70, 212, 70);
+    text-shadow: 0px 0px 10px var(--clr-green);
+    font-size: 40px;
+}
+
+.game-start {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.button.start, .button.restart {
+    font-size: 25px;
+    max-width: 130px;
+    border: 3px solid var(--clr-white);
+    background-color: var(--clr-light-grey);
+    color:  var(--clr-black);
+}
+
+.status-block { 
+    width: 100%;
+    display: flex;  
+    justify-content: space-between;
+    gap: 30px
+}
+
+.info {    
+    border: 3px solid var(--clr-grey);
+    border-radius: 16px;
+    padding: 25px;
+    min-width: 540px;
+    display: flex;
+    gap: 30px;
+}
+
+.column2 {
+    width: 220px;
+}
+
+.info span{
+    font-size: 26px;
+    color: var(--clr-white);
+}
+
+.info span.pink {
+    color: var(--clr-hero);
+}
+
+.info span.blue {
+    color: var(--clr-blue);
+}
+
+#equipment {
+    white-space: pre-wrap;
+}
+
+.info .row img {
+    height: 30px;
+}
+
+.icon {
+    display: inline;
+}
+
+.icon.inactive {
+    display: none;
+}
+
+.control-block {
+    max-width: 40%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 25px;
+}
+
+.button {
+    border: 3px solid var(--clr-blue);
+    color: var(--clr-white);
+    border-radius: 10px;
+    padding: 20px;
+    height: 20px;
+    max-width: 325px;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.button.attack {
+    color: var(--clr-red);
+    border: 3px solid var(--clr-red);
+}
+
+.button.defend {
+    color: var(--clr-green);
+    border: 3px solid var(--clr-green);
+}
+
+.equipment-block {
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+}
+
+.equipment-block.inactive {
+    display: none;
+}
+
+.button.equip-but {
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--clr-white);
+    border-radius: 10px;    
+    box-shadow: 0px 0px 10px rgba(0, 212, 70, 1);
+    cursor: pointer;
+}
+
+.equipment-block img {
+    max-height: 50px;
+    border-radius: 10px;;
+}
+
+.location-block {
+    border: 3px solid var(--clr-grey);
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.this-location {
+    display: flex;
+    gap: 10px;
+}
+
+.this-location span {
+    color: var(--clr-white);
+}
+
+#location {
+    color: var(--clr-blue);
+}
+
+.all-locations {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.button.location-but {
+
+}
+
+.log-block {
+    border: 3px solid var(--clr-grey);
+    height: 100%;
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll; 
+}
+
+.log-block::-webkit-scrollbar {
+    width: 7px;
+}
+
+.log-block span {    
+    font-family: 'Courier New', Courier, monospace;   
+    color: var(--clr-light-grey);
+    font-size: 16px;
+}
+
+.button.inactive, .button.start.inactive,.button.restart.inactive, .button.location-but.inactive, button.equip-but.inactive {
+    border: 3px solid var(--clr-grey);
+    color: var(--clr-grey);
+    background-color: unset;
+    cursor: unset;
+    box-shadow: unset;
+}
